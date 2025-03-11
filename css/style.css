@@ -1,0 +1,100 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+
+  :root {
+    --primary-color: navy;
+    --background-color: lightgrey;
+    --input-bg: white;
+    --input-text: black;
+    --border-color: #ccc;
+    --submit-bg: white;
+    --submit-hover-bg: white;
+    --white: #ffffff;
+  }
+  body {
+    background-color: var(--background-color);
+  }
+  
+  h2 {
+    border-bottom: 2px solid var(--primary-color);
+  }
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+    background: var(--background-color);
+  }
+  
+  .radio {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: var(--primary-color);
+  }
+  
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--input-bg);
+    color: var(--input-text);
+  }
+  
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--submit-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--submit-hover-bg);
+  }
+  .skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .skip-to-main:focus {
+    top: 10px;
+  }
+  button[type="reset"] {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
